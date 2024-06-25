@@ -76,12 +76,29 @@ int main()
 
 class SeqStack {
 public:
+	//构造函数初始化
+	SeqStack(int size)
+	{
+		cout << this << " 构造函数初始化" << endl;
+		_size = size;
+		_pstack = new int[_size];
+		_top = -1;
+	}
+	//析构函数初始化
+	~SeqStack()
+	{
+		cout << this << " 析构函数的调用" << endl;
+		delete[]_pstack;
+		_pstack = nullptr;
+	}
+	//自己写的初始化
 	void init(int size = 10)
 	{
 		_size = size;
 		_pstack = new int[_size];	
 		_top = -1;
 	}
+	//自己写的析构
 	void release()
 	{
 		delete[]_pstack;
@@ -134,20 +151,41 @@ private:
 		_size *= 2;
 	}
 };
+/*
+	1：全局区
+	2：堆区
+	3：栈区
+*/
+
+
+//全局区的内存释放
+SeqStack d(10); //先调用构造函数，程序结束调用析构函数
 
 int main()
 {
-	SeqStack stack;
-	stack.init(5);
+	SeqStack s(10);//栈区开辟内存
+	//堆区开辟内存
+	//new先分配内存，然后调用对象的构造函数初始化
+	//所以相对于malloc，new比他多一次构造函数的调用
+	SeqStack* p1 = new SeqStack(10);
+	p1->push(10);
+	p1->push(10);
+	p1->pop();
+	cout <<"堆区：" << p1->top() << endl;
+	//堆区内存需要自己释放
+	//使用delete释放堆区内存,首先会调用对象的析构函数
+	//然后释放该内存
+	delete p1;
+
 	for (int i = 0; i < 15; i++)
 	{
-		stack.push(rand() % 100);
+		s.push(rand() % 100);
 	}
-	while (!stack.empty())
+	while (!s.empty())
 	{
-		cout << stack.top() << ' ';
-		stack.pop();
+		cout << s.top() << ' ';
+		s.pop();
 	}
-	stack.release();
+	//s.release();
 	return 0;
 }
