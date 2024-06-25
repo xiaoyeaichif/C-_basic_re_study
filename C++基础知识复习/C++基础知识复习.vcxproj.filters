@@ -24,5 +24,8 @@
     <ClCompile Include="2-9new和delete.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="3-1类与this指针.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
