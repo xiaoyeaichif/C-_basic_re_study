@@ -132,6 +132,7 @@
     <ClCompile Include="2-9new和delete.cpp" />
     <ClCompile Include="2.10左值引用和右值引用的区别.cpp" />
     <ClCompile Include="3-1类与this指针.cpp" />
+    <ClCompile Include="3-2移动构造函数与拷贝构造函数的使用.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

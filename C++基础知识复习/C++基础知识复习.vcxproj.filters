@@ -30,5 +30,8 @@
     <ClCompile Include="2.10左值引用和右值引用的区别.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="3-2移动构造函数与拷贝构造函数的使用.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

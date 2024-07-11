@@ -62,7 +62,7 @@ Stack GetStack(Stack& stack)
 	*/
 	return tmp;
 }
-int main()
+int main_02_10()
 {
 	Stack s;
 	/*
