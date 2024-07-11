@@ -33,7 +33,7 @@ int main()
 {
 	Myclass temp(1000); // 有参构造函数
 	Myclass b = temp; // 拷贝构造函数的调用,拷贝完成还需要调用拷贝构造函数的析构函数
-	Myclass c = std::move(temp); //  把temp的资源转移给b 
+	Myclass c = std::move(temp); // 把temp的资源转移给b 
 	return 0;
 }
 
