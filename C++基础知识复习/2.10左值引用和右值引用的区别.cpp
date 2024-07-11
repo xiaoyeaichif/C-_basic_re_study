@@ -70,6 +70,6 @@ int main()
 	析构，所以此处调用operator=赋值重载函数，然后调用
 	析构函数
 	*/
-	s = GetStack(s);
+	s = GetStack(s); //
 	return 0;
 }
