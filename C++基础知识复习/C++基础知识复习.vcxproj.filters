@@ -27,5 +27,8 @@
     <ClCompile Include="3-1类与this指针.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="2.10左值引用和右值引用的区别.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

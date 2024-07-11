@@ -130,6 +130,7 @@
     <ClCompile Include="2-7C++的左值引用和右值引用.cpp" />
     <ClCompile Include="2-8指针和引用与const的结合.cpp" />
     <ClCompile Include="2-9new和delete.cpp" />
+    <ClCompile Include="2.10左值引用和右值引用的区别.cpp" />
     <ClCompile Include="3-1类与this指针.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

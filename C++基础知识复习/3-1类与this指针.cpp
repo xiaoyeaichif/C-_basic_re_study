@@ -161,7 +161,7 @@ private:
 //全局区的内存释放
 SeqStack d(10); //先调用构造函数，程序结束调用析构函数
 
-int main()
+int main_0301()
 {
 	SeqStack s(10);//栈区开辟内存
 	//堆区开辟内存
