@@ -38,16 +38,19 @@ int main()
 }
 
 /*
-	001F2468 构造函数初始化
+	00222468 构造函数初始化
+	0036FAEC Constructed
 
-	00EFFD94 Constructed
-	
-	00EFFD7C Moved
-	00EFFD7C Destructed
+	0036FAD4 Copied
 
-	00EFFD94 Destructed
+	0036FABC Moved
+	0036FABC Destructed
 
-	001F2468 析构函数的调用
+	0036FAD4 Destructed
+
+	0036FAEC Destructed
+	00222468 析构函数的调用
+
 
 	1：也就是先构造的函数，后析构
 	2：区分赋值和构造最简单的方法就是，左右两端是否在赋值前就已经初始化了，
