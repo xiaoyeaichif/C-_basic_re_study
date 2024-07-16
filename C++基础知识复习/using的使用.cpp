@@ -25,7 +25,7 @@ public:
 };
 
 
-int main()
+int main_3_3()
 {
 	using res = std::vector<int>; // 将vector<int>的别名定义为res
 	res res1; // 直接用res来生成一个vector<int>对象
