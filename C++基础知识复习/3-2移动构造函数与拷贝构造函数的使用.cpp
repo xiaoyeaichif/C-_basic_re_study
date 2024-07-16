@@ -29,7 +29,7 @@ private:
 	std::vector<int> data;
 };
 
-int main()
+int main_3_2()
 {
 	Myclass temp(1000); // 有参构造函数
 	Myclass b = temp; // 拷贝构造函数的调用,拷贝完成还需要调用拷贝构造函数的析构函数
