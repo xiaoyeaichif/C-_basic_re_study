@@ -41,6 +41,17 @@ private:
     string name;
 };
 
+// 返回shared_ptr对象
+shared_ptr<Cat> createCat()
+{
+    // 编译器优化
+    // 引用计数不会发生变化
+    // 使用移动语义来完成
+    return shared_ptr<Cat>(new Cat());
+}
+
+
+
 // shared_ptr智能指针的使用
 
 int main()
@@ -97,5 +108,12 @@ int main()
 
     // 最后的分割符
     cout<<"--------------------------"<<endl;
+    
+    // 获取返回的shared_ptr对象
+    // 返回的是局部对象,编译器会调用shared_ptr的移动构造函数,将临时的shared_ptr对象移动到p7中
+    // 所以这个过程中引用计数的大小不会发生变化
+    shared_ptr<Cat> p7 = createCat();
+    // 输出指针的引用计数
+    cout << "p7.use_count(): " << p7.use_count() << endl;
     return 0;
 }
